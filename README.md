@@ -18,7 +18,7 @@ The queue starts unpaused.
 
 ## Example
 
-```JavaScript
+```js
 const TaskQueue = require('taskqueue17')
 const taskQueue = new TaskQueue()
 
