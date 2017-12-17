@@ -1,6 +1,6 @@
 {
   "name": "taskqueue17",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a queue to ensure async functions are called one after another in order, with option to run some functions in parallel",
   "main": "index.js",
   "scripts": {
