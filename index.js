@@ -98,14 +98,10 @@ class TaskQueue {
   /**
    * Pushes a new function onto the task-stack
    * @param {function} fn the async function to push
-   * @param {String|Number} [group] the group identifier, consecutive tasks with the same group will be run in parallel
+   * @param {String|Number|null} [group] the group identifier, consecutive tasks with the same group will be run in parallel or null for no group (will never run parallel)
    * @returns a Promise that resolves the way fn would have resolved
    */
-  async push (fn, group) {
-    if (typeof group === 'undefined') {
-      group = null
-    }
-
+  async push (fn, group = null) {
     return new Promise((resolve, reject) => {
       const task = { fn, group, resolve, reject }
 
